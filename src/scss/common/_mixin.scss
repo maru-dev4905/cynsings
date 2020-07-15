@@ -1,0 +1,99 @@
+@import "../common/variable";
+
+// background-image mixin
+@mixin image ($url, $size:null, $pos:null, $rep:null,$att:null) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $rep;
+    background-attachment: $att;
+}
+// display flex mixin
+@mixin flex($dir:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,$wrap:null) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jusCon;
+    justify-items: $jusItem;
+    justify-self: $jusSelf;
+    align-content: $aliCon;
+    align-items: $aliItem;
+    align-self: $aliSelf;
+    flex-wrap: $wrap;
+}
+// display grid mixin
+@mixin grid($flow:null, $tCol:null, $tRow:null, $tAre:null, $col:null, $row:null, $gap:null, $rGap:null, $cGap:null, $AtCol:null, $AtRow:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,) {
+    display: grid;
+    grid-auto-flow: $flow;
+    grid-template-columns: $tCol;
+    grid-template-rows: $tRow;
+    grid-template-areas: $tAre;
+    grid-column: $col;
+    grid-row: $row;
+    grid-gap: $gap;
+    row-gap: $rGap;
+    column-gap: $cGap;
+    grid-auto-columns: $AtCol;
+    grid-auto-rows: $AtRow;
+    justify-content: $jusCon;
+    justify-items: $jusItem;
+    justify-self: $jusSelf;
+    align-content: $aliCon;
+    align-items: $aliItem;
+    align-self: $aliSelf;
+}
+// font mixin
+@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null,$style:null,$family:null) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-transform: $transform;
+    letter-spacing: $letter;
+    word-break: $break;
+    line-height: $height;
+    text-align: $align;
+    font-style: $style;
+    font-family: $family;
+}
+// position mixin
+@mixin position($pos:null, $t:null, $l:null, $b:null, $r:null, $z:null) {
+    position: $pos;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+    z-index: $z;
+}
+// border mixin
+@mixin border($color:null,$size:null,$style:null,$border:null,$shadow:null,$border-t:null,$border-r:null,$border-l:null,$border-b:null,$radius:null){
+    border-color: $color;
+    border-width: $size;
+    border-style: $style;
+    border-top: $border-t;
+    border-left: $border-l;
+    border-right: $border-r;
+    border-bottom: $border-b;
+    border: $border;
+    box-shadow: $shadow;
+    border-radius: $radius;
+}
+
+// responsive mixin
+@mixin responsive($device) {
+    @if $device == "iphone" {
+        @media screen and (max-width: $maxIphone){
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (max-width: $maxTablet) {
+            @content;
+        }
+    } @else if $device == "iphone-l" {
+        @media screen and (max-width: $maxIphone-l) {
+            @content;
+        }
+    } @else if $device == "tablet-l" {
+        @media screen and (max-width: $maxTablet-l) {
+            @content;
+        }
+    }
+}

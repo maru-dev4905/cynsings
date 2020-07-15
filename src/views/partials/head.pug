@@ -1,0 +1,34 @@
+include ../common/variable
+
+head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        //- Basic SEO
+        meta(name="description" content= mainDescription)
+        meta(name="theme-color" content= themeColor)
+        meta(name="keywords" content="content")
+        meta(name="robots" content="content")
+        
+        //- Open Graph 
+        meta(property="og:type" content="website")
+        meta(property="og:title" conten= mainTitle)
+        meta(property="og:description" content= mainDescription)
+        meta(property="og:site_name" content="cyn")
+
+        //- Favicon
+        link(rel=" shortcut icon"
+             href="./favicons/favicon.ico")
+        link(rel="apple-touch-icon-precomposed",
+             href="./favicons/favicon.ico")
+        link(rel="icon", 
+            type="image/png"
+            href="./favicons/favicon.ico")
+        link(rel="icon", 
+            size="180x180"
+            href="./favicons/favicon.ico")
+        
+        //- title
+        title= mainTitle
+        //- css link
+        link(rel="stylesheet", href="./css/cyn.css")
