@@ -1,0 +1,37 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+#footer{
+    @include flex($jusCon:space-between,$aliItem:center);
+    @include font($size:17px,$transform:uppercase,$letter:1.2px,$color:$white);
+    width: 100vw;
+    height: 100px;
+    background-color: $black;
+    padding: 0 50px;
+    .fnb{
+        @include flex($jusCon:center,$aliItem:center);
+        li{
+            margin-right: 25px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+        a{
+            display: block;
+            width: 50px;
+            opacity: 0.5;
+            transition: 0.2s;
+            padding: 10px;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .terms{
+        color: $white;
+        padding: 15px 0;
+    }
+}
