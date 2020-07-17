@@ -6,7 +6,7 @@
     height: 100vh;
     background-color: $black;
     .banner__dot{
-        @include position($pos:absolute,$l:0);
+        @include position($pos:absolute,$l:0,$z:100);
         @include image($url:"../images/common/dot.png",
                         $pos:center,
                         $size:contain,
@@ -24,15 +24,25 @@
         height: 100%;
     }
     .banner__content{
-        @include position($pos:absolute,$l:10%,$b:10%);
+        @include position($pos:absolute,$l:10%,$b:20%);
         h2{
             @include font($size:7.5rem,
                             $transform:uppercase,
                             $color:$white);
             margin-bottom: 30px;
             text-shadow: 2px 2px 20px $opBlack-5;
-            
         }
+    }
+    &::after{
+        @include position($pos:absolute,$l:0,$b:0,$z:50);
+        @include image($url:"../images/common/zigzag-w.png",
+                        $size:contain,
+                        $pos:center,
+                        $rep:no-repeat);
+        content: "";
+        display: block;
+        width: 30%;
+        height: 20%;
     }
 }
 .btn__color--change{
