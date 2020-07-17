@@ -1,0 +1,45 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+#banner{
+    width: 100vw;
+    height: 100vh;
+    background-color: $black;
+    .banner__dot{
+        @include position($pos:absolute,$l:0);
+        @include image($url:"../images/common/dot.png",
+                        $pos:center,
+                        $size:contain,
+                        $rep:repeat-x);
+        width: 300px;
+        height: 250px;
+    }
+    .banner__img{
+        @include position($pos:absolute,$r:0);
+        @include image($url:"../images/main/cyn-mood-swing-soundazed.jpg",
+                        $pos:center,
+                        $size:cover);
+        filter: grayscale(100%) brightness(0.8) saturate(2);
+        width: 70%;
+        height: 100%;
+    }
+    .banner__content{
+        @include position($pos:absolute,$l:10%,$b:10%);
+        h2{
+            @include font($size:7.5rem,
+                            $transform:uppercase,
+                            $color:$white);
+            margin-bottom: 30px;
+        }
+    }
+}
+.btn__color--change{
+    @include font($size:1.625rem,
+                    $transform:uppercase,
+                    $height:26px,
+                    $letter:0.2em,
+                    $color:$white);
+    width: 650px;
+    height: 50px;
+    background-color: $red;
+}

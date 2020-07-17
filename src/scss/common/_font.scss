@@ -1,0 +1,49 @@
+@font-face{
+    font-family: hanna;
+    src: url("../fonts/BM-HANNA.ttf") format("truetype");
+}
+@font-face{
+    font-family: Noto-Black;
+    src: url("../fonts/NotoSansKR-Black.otf") format("opentype");
+}
+@font-face{
+    font-family: Noto-Bold;
+    src: url("../fonts/NotoSansKR-Bold.otf") format("opentype");
+}
+@font-face{
+    font-family: Noto-Light;
+    src: url("../fonts/NotoSansKR-Light.otf") format("opentype");
+}
+@font-face{
+    font-family: Noto-Medium;
+    src: url("../fonts/NotoSansKR-Medium.otf") format("opentype");
+}
+@font-face{
+    font-family: Noto-Regular;
+    src: url("../fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face{
+    font-family: Noto-Thin;
+    src: url("../fonts/NotoSansKR-Thin.otf") format("opentype");
+}
+.hanna{
+    font-family: "hanna", sans-serif;
+}
+.notoBlack{
+    font-family: "Noto-Black", sans-serif;
+}
+.notoBold{
+    font-family: "Noto-Bold", sans-serif;
+}
+.notoLight{
+    font-family: "Noto-Light", sans-serif;
+}
+.notoMedium{
+    font-family: "Noto-Medium", sans-serif;
+}
+.notoRegular{
+    font-family: "Noto-Regular", sans-serif;
+}
+.notoThin{
+    font-family: "Noto-Thin", sans-serif;
+}
