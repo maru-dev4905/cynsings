@@ -1,0 +1,32 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+
+#header{
+    @include position($pos:absolute,$t:0,$l:0,$z:100);
+    @include flex($dir:row,$jusCon:space-between,$aliItem:center);
+    width: 100vw;
+    height: 150px;
+}
+.logo{
+    @include flex($jusCon:center,$aliItem:center);
+    width: 30%;
+    img{
+        width: 200px;
+    }
+}
+#navigation{
+    width: 70%;
+    ul{
+        @include flex($jusCon:space-around); 
+        padding: 0 15%;
+        a{
+            @include font($size:1.25rem,
+                            $transform:uppercase);
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
