@@ -3,7 +3,7 @@
 
 
 #header{
-    @include position($pos:absolute,$t:0,$l:0,$z:100);
+    @include position($pos:absolute,$t:0,$l:0,$z:500);
     @include flex($dir:row,$jusCon:space-between,$aliItem:center);
     width: 100vw;
     height: 150px;
