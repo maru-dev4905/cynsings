@@ -11,3 +11,8 @@ mixin nav(item)
             a(href="mailto:info@cynsings.com") contact
         li.hanna
             a(href="https://shop.cynsings.com/") store
+
+mixin musicCard(link,src,alt)
+    .music__card
+        a(href= link)
+            img(src= src, alt= alt)

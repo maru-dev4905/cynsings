@@ -8,6 +8,7 @@
     height: 100px;
     background-color: $black;
     padding: 0 50px;
+    border-top: 1px solid $white;
     .fnb{
         @include flex($jusCon:center,$aliItem:center);
         li{

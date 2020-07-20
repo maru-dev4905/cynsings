@@ -1,0 +1,48 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+#content__header{
+    @include position($pos:relative,$t:0,$l:0,$z:500);
+    @include flex($jusCon:space-between,$aliItem:center);
+    width: 100vw;
+    height: 200px;
+    background-color: $black;
+}
+.content__logo{
+    @include flex($jusCon:center,$aliItem:center);
+    width: 30%;
+    img{
+        width: 300px;
+    }
+    &::before{
+        @include position($pos:absolute,$l:20px,$t:100px,$z:-10);
+        @include image($url:"../images/common/dot.png",$size:contain,$rep:repeat-x);
+        content: "";
+        width: 300px;
+        height: 300px;
+    }
+}
+#content__navigation{
+    width: 70%;
+    ul{
+        @include flex($jusCon:space-around);
+        padding: 0 15%;
+        a{
+            @include font($size:1.25rem,$transform:uppercase);
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    &::after{
+        @include image($url:"../images/common/circle.png",$pos:center,$size:contain,$rep:no-repeat);
+        content: "";
+        width: 70px;
+        height: 70px;
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 25px;
+    }
+}
