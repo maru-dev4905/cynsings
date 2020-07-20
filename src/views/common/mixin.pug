@@ -1,0 +1,13 @@
+include ../common/variable
+
+mixin nav(item)
+    ul
+        li.hanna(class="nav--item")
+            a(href="./index.html") home
+        each items in item
+            li.hanna(class="nav--item")
+                a(href="./" + items + ".html")= items
+        li.hanna
+            a(href="mailto:info@cynsings.com") contact
+        li.hanna
+            a(href="https://shop.cynsings.com/") store

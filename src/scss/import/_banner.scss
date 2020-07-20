@@ -24,7 +24,7 @@
         height: 100%;
     }
     .banner__content{
-        @include position($pos:absolute,$l:10%,$b:20%);
+        @include position($pos:absolute,$l:10%,$b:20%,$z:100);
         h2{
             @include font($size:7.5rem,
                             $transform:uppercase,
@@ -34,7 +34,7 @@
         }
     }
     &::after{
-        @include position($pos:absolute,$l:0,$b:0,$z:50);
+        @include position($pos:absolute,$l:0,$b:0);
         @include image($url:"../images/common/zigzag-w.png",
                         $size:contain,
                         $pos:center,
