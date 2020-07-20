@@ -22,6 +22,7 @@
         filter: grayscale(100%) brightness(0.8) saturate(2);
         width: 70%;
         height: 100%;
+        transition: 0.3s;
     }
     .banner__content{
         @include position($pos:absolute,$l:10%,$b:20%,$z:100);
@@ -45,7 +46,8 @@
         height: 20%;
     }
 }
-.btn__color--change{
+.banner__box{
+    @include flex($jusCon:center,$aliItem:center);
     @include font($size:1.625rem,
                     $transform:uppercase,
                     $height:26px,
