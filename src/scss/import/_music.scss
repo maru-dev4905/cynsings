@@ -5,6 +5,15 @@
     @include position($pos:relative,$z:2000);
     background-color: $black;
     width: 100vw;
+    &::after{
+        @include position($pos:absolute,$b:10px,$r:10px);
+        @include image($url:"../images/common/zigzag-w.png",
+                        $size:contain,$pos:center,$rep:no-repeat);
+        content: "";
+        display: block;
+        width: 20%;
+        height: 5%;
+    }
 }
 .music__toggle {
     @include position($pos:relative,$z:1000);
