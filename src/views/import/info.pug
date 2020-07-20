@@ -4,22 +4,33 @@ include ../common/variable
 section#info
     .info__container
         .info__box
-            .info__img 
+            .info__img(
+                data-aos="fade-down-right"
+                data-aos-delay=400
+            )
                 img(src="./images/main/cyn-drinks-img.jpg", alt="cyn-drinks-img")
-            .img__back-design
+            .img__back-design(
+                data-aos="fade-down-right"
+            )
         .info__content
             .info__title
                 .info__title__text
                     span.hanna cyn
                     h2.hanna music artist
                 .info__title__img
-            ul.info__text
+            ul.info__text(
+                data-aos="fade-left"
+                data-aos-delay=1100
+            )
                     li.notoMedium Name : Cynthia Nabozny
                     li.notoMedium Birth : May 13, 1993 (27 years old)
                     li.notoMedium Genre : Pop
                     li.notoMedium Album : Mood Swing, Floating EP, Star 69 Presents This Is Star 69, Vol. 2, CYN
                     li.notoMedium Record company : Unsub Records (Caroline), DDM Recordings, Star 69 Records
-            ul.info__sns
+            ul.info__sns(
+                data-aos="fade-left"
+                data-aos-delay=1300
+            )
                 li
                     i
                         a(href="#")

@@ -2,8 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos';
 
 AOS.init({
-    offset:200,
-    duration: 300,
-    easing: "ease-in-out",
+    duration: 700,
+    easing: "ease-out",
     delay: 100
 });
