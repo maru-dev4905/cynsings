@@ -12,7 +12,10 @@ mixin nav(item)
         li.hanna
             a(href="https://shop.cynsings.com/") store
 
-mixin musicCard(link,src,alt, classes)
-    .music__card(class= classes)
+mixin musicCard(link,src,alt, classes, delay)
+    .music__card(class= classes
+                data-aos="zoom-in"
+                data-aos-delay= delay
+                data-aos-duration="650")
         a(href= link)
             img(src= src, alt= alt)
