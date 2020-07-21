@@ -1,22 +1,20 @@
 section#music
     .music__toggle
-        .toggle__container
-            input(type="checkbox" id="switch1" checked)
-            label.hanna(for="switch1") all release
-            input(type="checkbox" id="switch2") 
-            label.hanna(for="switch2") single
+        ul.toggle__container
+            li.hanna(class="toggle1") all release
+            li.hanna(class="toggle2") single
     .music__container
-        +musicCard("#",drinksIMG, drinksALT)
-        +musicCard("#",lonelyIMG, lonelyALT)
-        +musicCard("#",moodsIMG, moodsALT)
-        +musicCard("#",neverIMG, neverALT)
-        +musicCard("#",holyIMG, holyALT)
-        +musicCard("#",terribleIMG, terribleALT)
-        +musicCard("#",stillIMG, stillALT)
-        +musicCard("#",stillIMG2, stillALT2)
-        +musicCard("#",believerIMG, believerALT)
-        +musicCard("#",believerIMG2, believerALT2)
-        +musicCard("#",alrightIMG, alrightALT)
-        +musicCard("#",alrightIMG2, alrightALT2)
-        +musicCard("#",onlyIMG, onlyALT)
-        +musicCard("#",togetherIMG, togetherALT)
+        +musicCard("#",drinksIMG, drinksALT, 'solo-video')
+        +musicCard("#",lonelyIMG, lonelyALT, 'all-video')
+        +musicCard("#",moodsIMG, moodsALT, 'all-video')
+        +musicCard("#",neverIMG, neverALT, 'all-video')
+        +musicCard("#",holyIMG, holyALT, 'all-video')
+        +musicCard("#",terribleIMG, terribleALT, 'all-video')
+        +musicCard("#",stillIMG, stillALT, 'all-video')
+        +musicCard("#",stillIMG2, stillALT2, 'all-video')
+        +musicCard("#",believerIMG, believerALT, 'all-video')
+        +musicCard("#",believerIMG2, believerALT2, 'all-video')
+        +musicCard("#",alrightIMG, alrightALT, 'all-video')
+        +musicCard("#",alrightIMG2, alrightALT2, 'all-video')
+        +musicCard("#",onlyIMG, onlyALT, 'all-video')
+        +musicCard("#",togetherIMG, togetherALT, 'all-video')

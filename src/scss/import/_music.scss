@@ -28,10 +28,7 @@
         height: 100%;
         margin: 0 auto;
     }
-    input {
-        display: none;
-    }
-    label {
+    li {
         @include font($size:18px,$transform:uppercase,$letter:1.2px);
         cursor: pointer;
         color: $white;

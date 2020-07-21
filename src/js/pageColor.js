@@ -13,9 +13,10 @@ const pageColor = function(){
     }
     const _addEventHandlers = function(){
         window.addEventListener("load", _changeColor);
+        window.addEventListener("reload", initModule);
     }
     const _changeColor = function(){
-        if(path === "index.html" || "/"){
+        if(path === "index.html"){
             item[0].childNodes[0].classList.add("color-red");
         }
         else if(path === "music.html"){
