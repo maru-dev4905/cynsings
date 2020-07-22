@@ -30,3 +30,14 @@ mixin videoCard(link, text , delay)
             img(src= link, alt= text)
             figcaption
                 em.poetsen= text
+mixin tableTd(date, city, venue,delay)
+    tr.hanna(
+        data-aos="fade-up"
+        data-aos-duration="400"
+        data-aos-delay= delay
+    )
+        td= date
+        td= city
+        td= venue
+        td 
+            a(href="#") buy rsvp

@@ -12,7 +12,7 @@
     @include flex($jusCon:center,$aliItem:center);
     width: 30%;
     img{
-        width: 300px;
+        width: 200px;
     }
     &::before{
         @include position($pos:absolute,$l:20px,$t:100px,$z:-10);

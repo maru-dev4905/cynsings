@@ -1,0 +1,20 @@
+include ../common/mixin
+include ../common/variable
+
+section#tour
+    .tour__container
+        table
+            thead
+                tr.hanna
+                    th date
+                    th city
+                    th venue
+                    th tickets/rsvp
+            tbody
+                //-      date               city               venue 
+                +tableTd("sep 23",    "el paso",          "the lowbrow palace",     100)
+                +tableTd("sep 25",    "austin",           "parish",                 300)
+                +tableTd("oct 01",    "salt lake city",   "the greek station",      500)
+                +tableTd("oct 03",    "bancouver",        "portune sound club",     700)
+                +tableTd("oct 04",    "seattle",          "neptune theatre",        900)
+                +tableTd("oct 12",    "san francisco",    "the fillmore",           1100)
