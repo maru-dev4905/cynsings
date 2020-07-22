@@ -28,6 +28,7 @@
         overflow: hidden;
         transition: 0.3s;
         button{
+            @include position($pos:relative,$z:500);
             padding: 0;
             &::before{
                 @include position($pos:absolute,$l:0,$t:-15%,$z:300);
@@ -64,9 +65,9 @@
                             $letter:1.2px,$style:italic);
             @include position($pos:relative,$z:2000);
             width: 100%;
-            height: auto;
             background-color: $red;
-            padding: 20px;;
+            padding: 20px;
+            overflow: hidden;
         }
     }
 }
