@@ -14,3 +14,13 @@ section#video
         +videoCard(alrightVideo, alrightVideoDes,                   500)
         +videoCard(togetherVideo, togetherVideoDes,                 100)
         +videoCard(momentVideo, momentVideoDes,                     300)
+
+.video__box
+    iframe.video(
+            src="",
+            frameborder="0",
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+            allowfullscreen)
+    button.btn-close--video(type="img")
+        img(src="./images/common/plus-w-ico.png", alt="close-icon")
+    

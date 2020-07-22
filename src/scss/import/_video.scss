@@ -71,3 +71,28 @@
         }
     }
 }
+.video__box{
+    @include flex($jusCon:center,$aliItem:center);
+    @include position($pos:fixed,$l:50%,$t:50%,$z:99999);
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%,-50%);
+    background-color: rgba($color: $gray, $alpha: 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+    button{
+        @include position($pos:absolute,$t:3%,$r:5%);
+        padding: 20px;
+        transform: rotate(45deg);
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    iframe{
+        width: 80%;
+        height: 90%;
+        position: relative;
+    }
+}

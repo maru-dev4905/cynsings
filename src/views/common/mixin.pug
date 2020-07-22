@@ -26,7 +26,7 @@ mixin videoCard(link, text , delay)
         data-aos-delay= delay
         data-aos-duration="650"
     )
-        button(type="image")
+        button.video--btn(type="image")
             img(src= link, alt= text)
             figcaption
                 em.poetsen= text
