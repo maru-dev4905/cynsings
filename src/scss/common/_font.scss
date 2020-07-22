@@ -26,6 +26,17 @@
     font-family: Noto-Thin;
     src: url("../fonts/NotoSansKR-Thin.otf") format("opentype");
 }
+@font-face{
+    font-family: sword;
+    src: url("../fonts/Blacksword.otf") format("opentype");
+}
+@font-face{
+    font-family: poetsenOne;
+    src: url("../fonts/PoetsenOne-Regular.ttf") format("truetype");
+}
+.poetsen{
+    font-family: "poetsenOne", sans-serif;
+}
 .hanna{
     font-family: "hanna", sans-serif;
 }
@@ -46,4 +57,7 @@
 }
 .notoThin{
     font-family: "Noto-Thin", sans-serif;
+}
+.sword{
+    font-family: "sword", sans-serif;
 }

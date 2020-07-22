@@ -2,14 +2,14 @@ include ../common/variable
 
 mixin nav(item)
     ul
-        li.hanna(class="nav--item")
+        li.poetsen(class="nav--item")
             a(href="./index.html") home
         each items in item
-            li.hanna(class="nav--item")
+            li.poetsen(class="nav--item")
                 a(href="./" + items + ".html")= items
-        li.hanna
+        li.poetsen
             a(href="mailto:info@cynsings.com") contact
-        li.hanna
+        li.poetsen
             a(href="https://shop.cynsings.com/") store
 
 mixin musicCard(link,src,alt, classes, delay)
@@ -19,3 +19,14 @@ mixin musicCard(link,src,alt, classes, delay)
                 data-aos-duration="650")
         a(href= link)
             img(src= src, alt= alt)
+
+mixin videoCard(link, text , delay)
+    figure.video__card(
+        data-aos="zoom-in"
+        data-aos-delay= delay
+        data-aos-duration="650"
+    )
+        button(type="image")
+            img(src= link, alt= text)
+        figcaption
+            em.poetsen= text

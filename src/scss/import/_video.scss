@@ -1,0 +1,72 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+#video{ 
+    @include position($pos:relative);
+    background-color: $black;
+    width: 100vw;
+    &::after{
+        @include position($pos:absolute,$b:10px,$r:10px);
+        @include image($url:"../images/common/zigzag-w.png",
+                        $size:contain,$pos:center,$rep:no-repeat);
+        content: "";
+        display: block;
+        width: 20%;
+        height: 5%;
+    }
+}
+.video__container{
+    @include flex($jusCon:center,$aliItem:center,$wrap:wrap);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    .video__card{
+        position: relative;
+        width: 30%;
+        height: 400px;
+        margin: 20px 10px;
+        overflow: hidden;
+        transition: 0.3s;
+        button{
+            padding: 0;
+            &::before{
+                @include position($pos:absolute,$l:0,$t:-15%,$z:300);
+                @include image($url:"../images/icon/youtube-w-ico.png",$pos:center,$size:25%,$rep:no-repeat);
+                content: "";
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: 0.3s;
+                transform: rotate(-25deg);
+            }
+
+            &:hover{
+                &::before{
+                    opacity: 0.8;
+                    transform: rotate(0);
+                }
+                &::after{
+                    opacity: 0.5;
+                }
+                img{
+                    transform: scale(1.15);
+
+                }
+            }
+        }
+        img{
+            width: 100%;
+            transition: 0.3s;
+
+        }
+        figcaption{
+            @include font($size:20px,$color:$white,$transform:uppercase,
+                            $letter:1.2px,$style:italic);
+            @include position($pos:relative,$z:2000);
+            width: 100%;
+            height: auto;
+            background-color: $red;
+            padding: 20px;;
+        }
+    }
+}
