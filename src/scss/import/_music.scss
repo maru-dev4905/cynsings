@@ -94,7 +94,7 @@
 .music__detail{
     background-color: $black;
     position: relative;
-    padding: 50px 0;
+    padding-bottom: 100px;
     .music__detail__container{
         @include flex($dir:column,$jusCon:center,$aliItem:center);
         @include position($pos:relative,$z:2000);
@@ -104,6 +104,16 @@
         .detail__img{
             width: 450px;
         }
+    }
+    .back-btn{
+        @include position($pos:absolute,$l:50%);
+        @include flex($jusCon:center,$aliItem:center);
+        @include font($color:$white,$letter:1.2px);
+        width: 250px;
+        height: 50px;
+        background-color: $red;
+        transform: translateX(-50%);
+        margin-top: 20px;
     }
 }
 .music__accordion{
@@ -143,6 +153,10 @@
         li{
             @include flex($dir:column,$jusCon:center,$aliItem:center);
             width: 100%;
+            transition: 0.2s;
+            &:hover{
+                opacity: 0.5;
+            }
         }
     }
     input{
