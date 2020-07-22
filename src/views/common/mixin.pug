@@ -10,7 +10,7 @@ mixin nav(item)
         li.poetsen
             a(href="mailto:info@cynsings.com") contact
         li.poetsen
-            a(href="https://shop.cynsings.com/") store
+            a(target="_blank" href="https://shop.cynsings.com/") store
 
 mixin musicCard(link,src,alt, classes, delay)
     .music__card(class= classes
@@ -40,4 +40,43 @@ mixin tableTd(date, city, venue,delay)
         td= city
         td= venue
         td 
-            a(href="#") buy rsvp
+            a(target="_blank" href="https://concerts.livenation.com/sasha-sloan-san-francisco-california-10-12-2020/event/1C00578CDE739700?irgwc=1&clickid=QM%3A1LyQnyxyOUU0wUx0Mo3wBUkiRaPXROSR-0Y0&camefrom=CFC_BUYAT_219208&impradid=219208&REFERRAL_ID=tmfeedbuyat219208&wt.mc_id=aff_BUYAT_219208&utm_source=219208-Bandsintown&impradname=Bandsintown&utm_medium=affiliate") 
+                | buy /
+            a(target="_blank" href="https://www.bandsintown.com/e/1020040413?app_id=umg_caroline_cyn&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event&affil_code=umg_us&trigger=rsvp_going") 
+                |rsvp
+
+mixin sns(color)
+    if(color == "white")
+        li
+            i
+                a(target="_blank" href="https://www.facebook.com/cynnabozny")
+                    img(src="./images/icon/facebook-w-ico.png", alt="facebook-white-icon")
+        li
+            i
+                a(target="_blank" href="https://www.instagram.com/cynthialovely/")
+                    img(src="./images/icon/instagram-w-ico.png", alt="instagram-white-icon")
+        li
+            i
+                a(target="_blank" href="https://www.youtube.com/channel/UCbWOXv7tV80Bi2lgRIpdo1w")
+                    img(src="./images/icon/youtube-w-ico.png", alt="youtube-white-icon")
+        li
+            i
+                a(target="_blank" href="https://twitter.com/cynthialovely")
+                    img(src="./images/icon/twitter-w-ico.png", alt="twitter-white-icon")
+    else
+        li
+            i
+                a(target="_blank" href="https://www.facebook.com/cynnabozny")
+                    img(src="./images/icon/facebook-b-ico.png", alt="facebook-black-icon")
+        li
+            i
+                a(target="_blank" href="https://www.instagram.com/cynthialovely/")
+                    img(src="./images/icon/instagram-b-ico.png", alt="instagram-black-icon")
+        li
+            i
+                a(target="_blank" href="https://www.youtube.com/channel/UCbWOXv7tV80Bi2lgRIpdo1w")
+                    img(src="./images/icon/youtube-b-ico.png", alt="youtube-black-icon")
+        li
+            i
+                a(target="_blank" href="https://twitter.com/cynthialovely")
+                    img(src="./images/icon/twitter-b-ico.png", alt="twitter-black-icon")        
