@@ -91,3 +91,66 @@
         }
     }
 }
+.music__detail{
+    background-color: $black;
+    position: relative;
+    padding: 50px 0;
+    .music__detail__container{
+        @include flex($dir:column,$jusCon:center,$aliItem:center);
+        @include position($pos:relative,$z:2000);
+        text-align: center;
+        background-color: $red;
+        padding: 20px 0;
+        .detail__img{
+            width: 450px;
+        }
+    }
+}
+.music__accordion{
+    width: 450px;
+    background-color: $gray;
+    margin-top: 30px;
+    input[id *= "answer"]{
+        display: none;
+    }
+    .accordion__item__title{
+        @include font($size:20px,
+            $letter:1.2px,
+            $color:$white,
+            $transform:uppercase);
+        display: block;
+        padding: 20px 30px;
+        cursor: pointer;
+        background-color: $black;
+        border-bottom: 1.5px solid $red;
+    }
+    .accordion__item__content{
+        max-height: 0;
+        transition: 0.3s;
+        overflow: hidden;
+
+        a{
+            display: block;
+            width: 100%;
+            padding: 20px;
+        }
+        img{
+            width: 50%;
+        }
+        ul{
+            @include flex($dir:column,$jusCon:center,$aliItem:center);
+        }
+        li{
+            @include flex($dir:column,$jusCon:center,$aliItem:center);
+            width: 100%;
+        }
+    }
+    input{
+        &:checked + label{
+            + .accordion__item__content{
+                max-height: 100vh;
+                transition: 0.3s;
+            }
+        }
+    }
+}

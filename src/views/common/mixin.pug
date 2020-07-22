@@ -12,6 +12,18 @@ mixin nav(item)
         li.poetsen
             a(target="_blank" href="https://shop.cynsings.com/") store
 
+mixin musicNav(item)
+        ul
+        li.poetsen(class="nav--item")
+            a(href="/index.html") home
+        each items in item
+            li.poetsen(class="nav--item")
+                a(href="/" + items + ".html")= items
+        li.poetsen
+            a(href="mailto:info@cynsings.com") contact
+        li.poetsen
+            a(target="_blank" href="https://shop.cynsings.com/") store
+
 mixin musicCard(link,src,alt, classes, delay)
     .music__card(class= classes
                 data-aos="zoom-in"
