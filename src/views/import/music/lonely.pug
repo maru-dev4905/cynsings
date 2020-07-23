@@ -1,0 +1,18 @@
+include ../../common/mixin
+include ../../common/variable
+
+section.music__detail
+    .music__detail__container
+        img.detail__img(src= lonelyIMG, alt= lonelyALT)
+        +accordion(
+            "http://cyn.lnk.to/lonelygunWE/applemusic",
+            "http://cyn.lnk.to/lonelygunWE/deezer",
+            "http://cyn.lnk.to/lonelygunWE/napster",
+            "http://cyn.lnk.to/lonelygunWE/pandora",
+            "http://cyn.lnk.to/lonelygunWE/spotify",
+            "http://cyn.lnk.to/lonelygunWE/tidal",
+            "http://cyn.lnk.to/lonelygunWE/amazonmp3",
+            "http://cyn.lnk.to/lonelygunWE/google-play",
+            "http://cyn.lnk.to/lonelygunWE/itunes"
+        )
+    a.back-btn(href="/music.html" class="poetsen") back to rellases

@@ -1,0 +1,18 @@
+include ../../common/mixin
+include ../../common/variable
+
+section.music__detail
+    .music__detail__container
+        img.detail__img(src= onlyIMG, alt= onlyALT)
+        +accordion(
+            "http://cyn.lnk.to/onlywithyouWE/applemusic",
+            "http://cyn.lnk.to/onlywithyouWE/deezer",
+            "http://cyn.lnk.to/onlywithyouWE/napster",
+            "http://cyn.lnk.to/onlywithyouWE/pandora",
+            "http://cyn.lnk.to/onlywithyouWE/spotify",
+            "http://cyn.lnk.to/onlywithyouWE/tidal",
+            "http://cyn.lnk.to/onlywithyouWE/amazonmp3",
+            "http://cyn.lnk.to/onlywithyouWE/google-play",
+            "http://cyn.lnk.to/onlywithyouWE/itunes"
+        )
+    a.back-btn(href="/music.html" class="poetsen") back to rellases

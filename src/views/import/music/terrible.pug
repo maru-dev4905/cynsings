@@ -1,0 +1,18 @@
+include ../../common/mixin
+include ../../common/variable
+
+section.music__detail
+    .music__detail__container
+        img.detail__img(src= terribleIMG, alt= terribleALT)
+        +accordion(
+            "http://cyn.lnk.to/terribleideasWE/applemusic",
+            "http://cyn.lnk.to/terribleideasWE/deezer",
+            "http://cyn.lnk.to/terribleideasWE/napster",
+            "http://cyn.lnk.to/terribleideasWE/pandora",
+            "http://cyn.lnk.to/terribleideasWE/spotify",
+            "http://cyn.lnk.to/terribleideasWE/tidal",
+            "http://cyn.lnk.to/terribleideasWE/amazonmp3",
+            "http://cyn.lnk.to/terribleideasWE/google-play",
+            "http://cyn.lnk.to/terribleideasWE/itunes"
+        )
+    a.back-btn(href="/music.html" class="poetsen") back to rellases

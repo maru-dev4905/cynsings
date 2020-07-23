@@ -1,0 +1,18 @@
+include ../../common/mixin
+include ../../common/variable
+
+section.music__detail
+    .music__detail__container
+        img.detail__img(src= believerIMG, alt= believerALT)
+        +accordion(
+            "http://cyn.lnk.to/believerWE/applemusic",
+            "http://cyn.lnk.to/believerWE/deezer",
+            "http://cyn.lnk.to/believerWE/napster",
+            "http://cyn.lnk.to/believerWE/pandora",
+            "http://cyn.lnk.to/believerWE/spotify",
+            "http://cyn.lnk.to/believerWE/tidal",
+            "http://cyn.lnk.to/believerWE/amazonmp3",
+            "http://cyn.lnk.to/believerWE/google-play",
+            "http://cyn.lnk.to/believerWE/itunes"
+        )
+    a.back-btn(href="/music.html" class="poetsen") back to rellases

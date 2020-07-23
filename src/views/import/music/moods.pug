@@ -1,0 +1,18 @@
+include ../../common/mixin
+include ../../common/variable
+
+section.music__detail
+    .music__detail__container
+        img.detail__img(src= moodsIMG, alt= moodsALT)
+        +accordion(
+            "http://cyn.lnk.to/moodswingWE/applemusic",
+            "http://cyn.lnk.to/moodswingWE/deezer",
+            "http://cyn.lnk.to/moodswingWE/napster",
+            "http://cyn.lnk.to/moodswingWE/pandora",
+            "http://cyn.lnk.to/moodswingWE/spotify",
+            "http://cyn.lnk.to/moodswingWE/tidal",
+            "http://cyn.lnk.to/moodswingWE/amazonmp3",
+            "http://cyn.lnk.to/moodswingWE/google-play",
+            "http://cyn.lnk.to/moodswingWE/itunes"
+        )
+    a.back-btn(href="/music.html" class="poetsen") back to rellases

@@ -4,49 +4,15 @@ include ../../common/variable
 section.music__detail
     .music__detail__container
         img.detail__img(src= drinksIMG, alt= drinksALT)
-        .music__accordion
-            input#answer1(type="checkbox")
-            label.accordion__item__title(for="answer1" class="hanna") listen now
-            .accordion__item__content
-                ul
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/applemusic" target="_blank")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/applemusic.svg",
-                                alt="aplle music-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/deezer" target="_blank")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/deezer.svg",
-                                alt="deezer-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/napster" target="_blank")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/napster.svg",
-                                alt="napster-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/pandora" target="_blank")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/pandora.svg", 
-                                alt="pandora-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/spotify" target="_blank")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/spotify.svg",
-                                alt="spotify-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/tidal" target="_blank")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/tidal.svg",
-                                alt="tidal-img")
-            input#answer2(type="checkbox")
-            label.accordion__item__title(for="answer2" class="hanna") buy now
-            .accordion__item__content
-                ul
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/amazonmp3")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/amazonmp3.svg",
-                                alt="amazon music-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/google-play")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/google-play.svg",
-                                alt="google play-img")
-                    li
-                        a(href="http://cyn.lnk.to/drinkswe/itunes")
-                            img(src="https://www.cynsings.com/wp-content/plugins/umg-grand-royal-theme-plugin/images/stores/itunes.svg", 
-                                alt="iTunes store-img")
+        +accordion(
+            "http://cyn.lnk.to/drinkswe/applemusic",
+            "http://cyn.lnk.to/drinkswe/deezer",
+            "http://cyn.lnk.to/drinkswe/napster",
+            "http://cyn.lnk.to/drinkswe/pandora",
+            "http://cyn.lnk.to/drinkswe/spotify",
+            "http://cyn.lnk.to/drinkswe/tidal",
+            "http://cyn.lnk.to/drinkswe/amazonmp3",
+            "http://cyn.lnk.to/drinkswe/google-play",
+            "http://cyn.lnk.to/drinkswe/itunes"
+        )
     a.back-btn(href="/music.html" class="poetsen") back to rellases
