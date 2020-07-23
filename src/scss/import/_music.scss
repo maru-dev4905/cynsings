@@ -6,6 +6,9 @@
     background-color: $black;
     width: 100vw;
     &::after{
+        @include responsive("tablet-l"){
+            display: none;
+        }
         @include position($pos:absolute,$b:10px,$r:10px);
         @include image($url:"../images/common/zigzag-w.png",
                         $size:contain,$pos:center,$rep:no-repeat);
@@ -41,6 +44,15 @@
     margin: 0 auto;
 
     .music__card {
+        @include responsive("tablet-l"){
+            width: 40%;
+        }
+        @include responsive("iphone-l"){
+            width: 60%;
+        }
+        @include responsive("iphone"){
+            width: 80%;
+        }
         position: relative;
         width: 30%;
         margin: 30px 10px;
@@ -96,12 +108,21 @@
     position: relative;
     padding-bottom: 100px;
     .music__detail__container{
+        @include responsive("iphone-l"){
+            padding: 50px 0;
+        }
         @include flex($dir:column,$jusCon:center,$aliItem:center);
         @include position($pos:relative,$z:2000);
         text-align: center;
         background-color: $red;
         padding: 20px 0;
         .detail__img{
+            @include responsive("iphone-l"){
+                width: 350px;
+            }
+            @include responsive("iphone"){
+                width: 300px;
+            }
             width: 450px;
         }
     }
@@ -117,6 +138,9 @@
     }
 }
 .music__accordion{
+    @include responsive("iphone"){
+        width: 100vw;
+    }
     width: 450px;
     background-color: $gray;
     margin-top: 30px;
