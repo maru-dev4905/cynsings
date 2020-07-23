@@ -1,0 +1,28 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+#nav-mobile{
+    @include responsive("iphone-l"){
+        display: block;
+    }
+    background-color: $black;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 8888;
+    width: 100vw;
+    height: 10%;
+    padding: 0 20px;
+    border-top: 1px solid $white;
+    ul{
+        @include flex($jusCon:space-between,$aliItem:center);
+        height: 100%;
+        img{
+            @include responsive("iphone"){
+                width: 36px;
+            }
+            width: 42px;
+        }
+    }
+}

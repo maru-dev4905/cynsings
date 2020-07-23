@@ -3,21 +3,45 @@
 
 
 #header{
+    @include responsive("iphone-l"){
+        height: 15%;
+    }
+    @include responsive("iphone"){
+        height: 10%;
+    }
     @include position($pos:absolute,$t:0,$l:0,$z:500);
     @include flex($jusCon:space-between,$aliItem:center);
     width: 100vw;
     height: 150px;
 }
 .logo{
+    @include responsive("iphone-l"){
+        margin-left: 50px;
+    }
+    @include responsive("iphone"){
+        margin-left: 25px;
+    }
     @include flex($jusCon:center,$aliItem:center);
     width: 30%;
     img{
+        @include responsive("tablet"){
+            width: 150px;
+        }
+        @include responsive("iphone-l"){
+            width: 100px;
+        }
         width: 200px;
     }
 }
 #navigation{
+    @include responsive("iphone-l"){
+        display: none;
+    }
     width: 70%;
     ul{
+        @include responsive("tablet-l"){
+            padding: 0 5%;
+        }
         @include flex($jusCon:space-around); 
         padding: 0 15%;
         a{

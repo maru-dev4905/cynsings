@@ -2,10 +2,30 @@
 @import "../common/variable";
 
 #banner{
+    @include responsive("iphone-l"){
+        height: 90vh;
+    }
     width: 100vw;
     height: 100vh;
     background-color: $black;
+    overflow: hidden;
     .banner__dot{
+        @include responsive("tablet-l"){
+            width: 30%;
+            height: 20%;
+        }
+        @include responsive("iphone-l"){
+            width: 35%;
+            height: 15%;
+            left: auto;
+            right: 0;
+        }
+        @include responsive("iphone"){
+            width: 30%;
+            height: 10%;
+            left: auto;
+            right: 0;
+        }
         @include position($pos:absolute,$l:0,$z:100);
         @include image($url:"../images/common/dot.png",
                         $pos:center,
@@ -15,6 +35,15 @@
         height: 250px;
     }
     .banner__img{
+        @include responsive("iphone-l"){
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 70%;
+        }
+        @include responsive("iphone"){
+            height: 80%;
+        }
         @include position($pos:absolute,$r:0);
         @include image($url:"../images/main/cyn-mood-swing-soundazed.jpg",
                         $pos:center,
@@ -26,15 +55,38 @@
     }
     .banner__content{
         @include position($pos:absolute,$l:10%,$b:20%,$z:100);
+        @include responsive("iphone-l"){
+            width: 100%;
+            left: 0;
+            bottom: 10%;
+        }
+        @include responsive("iphone"){
+            bottom: 10%;
+        }
         h2{
-            @include font($size:7.5rem,
+            @include responsive("tablet-l"){
+                font-size: 4.5rem;
+            }
+            @include responsive("tablet"){
+                font-size: 4rem;
+            }
+            @include responsive("iphone-l"){
+                font-size: 10vw;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            @include font($size:6.5rem,
                             $transform:uppercase,
                             $color:$white);
             margin-bottom: 50px;
             text-shadow: 2px 2px 20px $opBlack-5;
+            
         }
     }
     &::after{
+        @include responsive("iphone-l"){
+            display: none;
+        }
         @include position($pos:absolute,$l:0,$b:0);
         @include image($url:"../images/common/zigzag-w.png",
                         $size:contain,
@@ -47,8 +99,18 @@
     }
 }
 .banner__box{
+    @include responsive("tablet-l"){
+        width: 450px;
+        font-size: 22px;
+    }
+    @include responsive("tablet"){
+        font-size: 20px;
+    }
+    @include responsive("iphone-l"){
+        width: 100%;
+    }
     @include flex($jusCon:center,$aliItem:center);
-    @include font($size:1.625rem,
+    @include font($size:24px,
                     $transform:uppercase,
                     $height:26px,
                     $letter:0.2em,

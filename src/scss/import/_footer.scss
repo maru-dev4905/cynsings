@@ -2,6 +2,14 @@
 @import "../common/variable";
 
 #footer{
+    @include responsive("iphone-l"){
+        margin-bottom: 13.5%;
+        padding: 0 20px;
+        justify-content: space-around;
+    }
+    @include responsive("iphone"){
+        margin-bottom: 20%;
+    }
     @include flex($jusCon:space-between,$aliItem:center);
     @include font($size:17px,$transform:uppercase,$letter:1.2px,$color:$white);
     width: 100vw;
@@ -9,6 +17,7 @@
     background-color: $black;
     padding: 0 50px;
     border-top: 1px solid $white;
+    transition: 0.3s;
     .fnb{
         @include flex($jusCon:center,$aliItem:center);
         li{
@@ -18,6 +27,9 @@
             }
         }
         a{
+            @include responsive("iphone-l"){
+                width: 45px;
+            }
             display: block;
             width: 50px;
             opacity: 0.5;
@@ -32,6 +44,9 @@
         }
     }
     .terms{
+        @include responsive("iphone-l"){
+            display: none;
+        }
         color: $white;
         padding: 15px 0;
     }
