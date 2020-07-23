@@ -2,10 +2,13 @@
 @import "../common/variable";
 
 #video{ 
-    @include position($pos:relative);
+    @include position($pos:relative,$z:1000);
     background-color: $black;
     width: 100vw;
     &::after{
+        @include responsive("tablet-l"){
+            display: none;
+        }
         @include position($pos:absolute,$b:10px,$r:10px);
         @include image($url:"../images/common/zigzag-w.png",
                         $size:contain,$pos:center,$rep:no-repeat);
@@ -21,6 +24,15 @@
     max-width: 1200px;
     margin: 0 auto;
     .video__card{
+        @include responsive("tablet-l"){
+            width: 40%;
+        }
+        @include responsive("iphone-l"){
+            width: 60%;
+        }
+        @include responsive("iphone"){
+            width: 80%;
+        }
         position: relative;
         width: 30%;
         height: 400px;
@@ -91,8 +103,19 @@
         }
     }
     iframe{
+        @include responsive("tablet-l"){
+            width: 85%;
+            height: 70%;
+        }
+        @include responsive("iphone-l"){
+            width: 90%;
+            height: 50%;
+        }
+        @include responsive("iphone"){
+            height: 50%;
+        }
         width: 80%;
-        height: 90%;
+        height: 85%;
         position: relative;
     }
 }
