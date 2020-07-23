@@ -5,6 +5,7 @@
     @include position($pos:relative,$z:1000);
     background-color: $black;
     width: 100vw;
+    border-top: 1px solid $white;
     &::after{
         @include responsive("tablet-l"){
             display: none;
@@ -19,10 +20,11 @@
     }
 }
 .video__container{
-    @include flex($jusCon:center,$aliItem:center,$wrap:wrap);
+    @include flex($jusCon:center,$aliItem:flex-start,$wrap:wrap);
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 50px 0;
     .video__card{
         @include responsive("tablet-l"){
             width: 40%;
@@ -35,7 +37,6 @@
         }
         position: relative;
         width: 30%;
-        height: 400px;
         margin: 20px 10px;
         overflow: hidden;
         transition: 0.3s;
@@ -63,7 +64,6 @@
                 }
                 img{
                     transform: scale(1.15);
-
                 }
             }
         }

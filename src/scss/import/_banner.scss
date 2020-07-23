@@ -3,26 +3,21 @@
 
 #banner{
     @include responsive("iphone-l"){
-        height: 90vh;
+        height: calc(100vh - 90px);
     }
     width: 100vw;
     height: 100vh;
     background-color: $black;
     overflow: hidden;
+    position: relative;
     .banner__dot{
         @include responsive("tablet-l"){
             width: 30%;
             height: 20%;
         }
         @include responsive("iphone-l"){
-            width: 35%;
-            height: 15%;
-            left: auto;
-            right: 0;
-        }
-        @include responsive("iphone"){
-            width: 30%;
-            height: 10%;
+            width: 200px;
+            height: 105px;
             left: auto;
             right: 0;
         }
@@ -36,17 +31,13 @@
     }
     .banner__img{
         @include responsive("iphone-l"){
-            top: 50%;
-            transform: translateY(-50%);
+            bottom: 0;
             width: 100%;
-            height: 70%;
-        }
-        @include responsive("iphone"){
-            height: 80%;
+            height: calc(100% - 105px);
         }
         @include position($pos:absolute,$r:0);
         @include image($url:"../images/main/cyn-mood-swing-soundazed.jpg",
-                        $pos:center,
+                        $pos:bottom center,
                         $size:cover);
         filter: grayscale(100%) brightness(0.8) saturate(2);
         width: 70%;
@@ -58,10 +49,7 @@
         @include responsive("iphone-l"){
             width: 100%;
             left: 0;
-            bottom: 10%;
-        }
-        @include responsive("iphone"){
-            bottom: 10%;
+            bottom: 0;
         }
         h2{
             @include responsive("tablet-l"){

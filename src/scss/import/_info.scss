@@ -35,9 +35,7 @@
             left: 20%;
         }
         @include responsive("iphone-l"){
-            left: 15%;
-            width: 250px;
-            height: 250px;
+            display: none;
         }
         @include position($pos:absolute,$t:15%,$l:-5%,$z:10);
         width: 400px;
@@ -58,8 +56,8 @@
             left: 0;
         }
         @include responsive("iphone-l"){
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
         }
         @include position($pos:absolute, $t:20%,$z:20);
         box-shadow: 0px 0px 25px $opBlack-5;
@@ -72,8 +70,8 @@
                 height: 300px;
             }
             @include responsive("iphone-l"){
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
             }
             filter: grayscale(100%) brightness(0.8) saturate(2);
             width: 400px;
@@ -115,6 +113,12 @@
     }
     @include flex($dir:column,$jusCon:center,$aliItem:center);
     .info__title{
+        @include responsive("tablet"){
+            font-size: 15px;
+        }
+        @include responsive("iphone"){
+            font-size: 13px;
+        }
         @include font($size:18px,$weight:600,$transform:uppercase,$align:right);
         display: inline-flex;
         position: relative;
@@ -125,6 +129,10 @@
             @include position($pos:relative,$z:100);
             font-size: 3em;
             &::after{
+                @include responsive("iphone"){
+                    height: 25px;
+                    width: 100%;
+                }
                 @include position($pos:absolute,$r:-25px,$b:-5px,$z:-50);
                 content: "";
                 width: 300px;
@@ -151,6 +159,9 @@
         padding-top: 25px;
         width: 80%;
         li{
+            @include responsive("iphone"){
+                font-size: 14px;
+            }
             @include font($size:16px,$height:2em,$break:keep-all);
         }
     }

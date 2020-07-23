@@ -5,6 +5,7 @@
     @include position($pos:relative,$z:2000);
     width: 100vw;
     background-color: $black;
+    border-top: 1px solid $white;
     &::after {
         @include responsive("tablet-l"){
             display: none;
