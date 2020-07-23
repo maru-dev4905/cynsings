@@ -1,5 +1,4 @@
-# cynsings
-🎤🎶 cyn official Site - renewal page
+# 🎤🎶 cynsings (responsive)
 
 ## skills of use
 pug, scss, gulp, javascript
