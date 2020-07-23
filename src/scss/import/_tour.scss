@@ -2,10 +2,14 @@
 @import "../common/variable";
 
 #tour {
+    @include position($pos:relative,$z:2000);
     width: 100vw;
     background-color: $black;
     &::after {
-        @include position($pos:absolute,$b:10px,$r:10px);
+        @include responsive("tablet-l"){
+            display: none;
+        }
+        @include position($pos:absolute,$b:10px,$r:10px,$z:0);
         @include image($url:"../images/common/zigzag-w.png", $size:contain,$pos:center,$rep:no-repeat);
         content: "";
         display: block;
@@ -14,14 +18,31 @@
     }
 }
 .tour__container {
+    @include responsive("iphone-l"){
+        padding: 50px 0;
+    }
+    @include responsive("iphone"){
+        padding: 20px 0;
+    }
     padding: 100px 0;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 
     table {
+        @include responsive("tablet-l"){
+            font-size: 16px;
+        }
         @include font($color:$white, $size:20px, $letter:1.2px, $transform:uppercase, $align:center);
         width: 100%;
+        tr{
+            @include responsive("iphone-l"){
+                @include flex($dir:column,$jusCon:center,$aliItem:center);
+                &:nth-child(1){
+                    display: none;
+                }
+            }
+        }
     }
     a {
         transition: 0.3s;
