@@ -31,11 +31,10 @@
             left: 5%;
         }
         @include responsive("tablet"){
-            top: 10%;
+            top: 7.5%;
             left: 20%;
         }
         @include responsive("iphone-l"){
-            top: 12.5%;
             left: 15%;
             width: 250px;
             height: 250px;
@@ -55,7 +54,7 @@
         }
         @include responsive("tablet"){
             position: relative;
-            top: 35%;
+            top: 20%;
             left: 0;
         }
         @include responsive("iphone-l"){

@@ -2,6 +2,12 @@
 @import "../common/variable";
 
 #content__header{
+    @include responsive("iphone-l"){
+        height: 150px;
+    }
+    @include responsive("iphone"){
+        height: 100px;
+    }
     @include position($pos:relative,$t:0,$l:0,$z:500);
     @include flex($jusCon:space-between,$aliItem:center);
     width: 100vw;
@@ -9,12 +15,31 @@
     background-color: $black;
 }
 .content__logo{
+    @include responsive("iphone-l"){
+        margin-left: 50px;
+    }
+    @include responsive("iphone"){
+        margin-left: 25px;
+    }
     @include flex($jusCon:center,$aliItem:center);
     width: 30%;
     img{
+        @include responsive("tablet"){
+            width: 150px;
+        }
+        @include responsive("iphone-l"){
+            width: 100px;
+        }
         width: 200px;
     }
     &::before{
+        @include responsive("tablet"){
+            top: 0;
+            left: 10px;
+        }
+        @include responsive("iphone-l"){
+            left: -50px;
+        }
         @include position($pos:absolute,$l:20px,$t:100px,$z:-10);
         @include image($url:"../images/common/dot.png",$size:contain,$rep:repeat-x);
         content: "";
@@ -23,8 +48,15 @@
     }
 }
 #content__navigation{
+    @include responsive("iphone-l"){
+        display: none;
+    }
     width: 70%;
     ul{
+        @include responsive("tablet-l"){
+            padding: 0 2%;
+            margin-right: 10px;
+        }
         @include flex($jusCon:space-around);
         padding: 0 15%;
         a{
