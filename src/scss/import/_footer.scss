@@ -7,6 +7,10 @@
         padding: 0 20px;
         justify-content: space-around;
     }
+    @include responsive("iphone"){
+        @include flex($dir:column,$jusCon:center,$aliItem:center);
+        font-size: 14px;
+    }
     @include flex($jusCon:space-between,$aliItem:center);
     @include font($size:17px,$transform:uppercase,$letter:1.2px,$color:$white);
     width: 100vw;
